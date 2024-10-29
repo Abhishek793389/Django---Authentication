@@ -1,0 +1,143 @@
+
+
+/* Main Container Styling */
+.homepage-container {
+  text-align: center;
+  padding: 60px 20px;
+  background-color:white
+}
+
+/* Welcome Text Styling */
+.welcome-text {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.welcome-text span {
+  color: #6a3d54;
+  font-style: italic;
+}
+
+/* Intro Text Styling */
+.intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #666;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Project Info Container */
+.project-info {
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  display: inline-block;
+ 
+}
+
+/* Image Hover Container */
+.image-container {
+  position: absolute;
+  
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9); */
+  transition: transform 0.5s;
+  
+ 
+
+}
+.content{
+  background-color: white;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+/* Features List Styling */
+.features-list-container {
+  max-width: 400px;
+  text-align: left;
+  margin: 20px;
+}
+
+.features-list-container h2 {
+  color: #6a3d54;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  position: relative;
+  padding-left: 20px;
+  color: #333;
+}
+
+.features-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #6a3d54;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

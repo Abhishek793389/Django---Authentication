@@ -1,0 +1,80 @@
+.blogs-section {
+  margin-top: 0px; /* Add spacing above the blog section */
+  margin-left: 30px;
+  padding: 20px;
+  border: 1px solid #ddd; /* Light border around the blog section */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.blogs-section h2 {
+  font-size: 24px; /* Larger font for the heading */
+  color: #333; /* Dark color for contrast */
+  margin-bottom: 20px; /* Space below the heading */
+  text-align: center; /* Center the heading */
+}
+
+.blogs-section ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.blogs-section li {
+  margin-bottom: 15px; /* Space between blog items */
+  padding: 15px; /* Padding inside each blog item */
+  border: 1px solid #ccc; /* Light border around each blog item */
+  border-radius: 5px; /* Slightly rounded corners */
+  background-color: #fff; /* White background for blog items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.blogs-section h3 {
+  font-size: 20px; /* Size for blog titles */
+  color: #007BFF; /* Bootstrap primary color (can be changed) */
+  margin-bottom: 10px; /* Space below blog title */
+}
+
+.blogs-section p {
+  font-size: 16px; /* Size for blog content */
+  color: #555; /* Dark grey color for text */
+}
+
+.blogs-section small {
+  display: block; /* Make the date display on a new line */
+  margin-top: 10px; /* Space above the date */
+  font-size: 12px; /* Smaller font for date */
+  color: #888; /* Light grey color for the date */
+}
+
+/* Styling for the action div */
+.actiom {
+  display: flex;               /* Align links horizontally */
+  gap: 15px;                   /* Space between the links */
+  margin-top: 10px;            /* Space between content and actions */
+  justify-content: flex-start;   /* Align actions to the right */
+}
+
+/* Styling the links inside the action div */
+.actiom a {
+  text-decoration: none;       /* Remove underline from links */
+  padding: 8px 8px;           /* Add padding inside the links */
+  border-radius: 5px;          /* Rounded corners */   /* Bootstrap primary blue color */
+  color: #888;               /* White text for better contrast */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for the links */
+.actiom a:hover {
+  background-color: #575555;  /* Darker blue on hover */
+  color: white;
+}
+
+.messages p {
+  text-align: center; /* Center the text inside the div */
+  margin: 0; /* Center the div itself in the page with some margin */
+  padding: 15px; /* Add padding for spacing inside the div */
+  color: #28a745;
+  background-color: #d4edda;
+  border-radius: 5px; /* Slightly rounded corners */
+  width: 100%; /* Width of the div; adjust as needed */
+}

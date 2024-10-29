@@ -1,0 +1,116 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block title %} About {% endblock %}
+{% block content %}
+<style>
+  .content {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+   
+  }
+
+  .container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    color: #555;
+    margin-top: 20px;
+  }
+
+  .pi {
+    line-height: 1.6;
+    color: #666;
+  }
+
+  ul {
+    margin-left: 20px;
+  }
+
+  li {
+    margin: 8px 0;
+  }
+</style>
+
+
+<div class="container">
+  <h1>About User Authentication System</h1>
+
+  <p class="pi">
+    The <strong>User Authentication System</strong> in a web application is essential for ensuring that only authorized
+    users can access certain features or pages. It involves verifying a user's identity using credentials such as a
+    <strong>username and password</strong>. Below is an overview of how our authentication and session management system
+    works.
+  </p>
+
+  <h2>Key Features of the Authentication System</h2>
+  <ul>
+    <li><strong>Registration:</strong> Users can sign up by providing their personal details like username, password,
+      and email.</li>
+    <li><strong>Login:</strong> Registered users log in by entering their valid credentials.</li>
+    <li><strong>Session Management:</strong> A session is created after a successful login, allowing users to stay
+      authenticated across multiple pages.</li>
+    <li><strong>Dashboard Access:</strong> After logging in, users are redirected to their personal dashboard where they
+      can manage their activities.</li>
+  </ul>
+
+  <h2>Session Management and User Activities</h2>
+  <p class="pi">
+    Our system uses Django’s built-in session management to keep track of logged-in users. Once authenticated, the user
+    can perform the following activities:
+  </p>
+  <ul>
+    <li><strong>Add Blog:</strong> Users can create new blog posts with a title and content.</li>
+    <li><strong>View Blog:</strong> Users can view their own blogs and those created by others.</li>
+    <li><strong>Update Blog:</strong> Users can edit the content of their existing blogs.</li>
+    <li><strong>Delete Blog:</strong> Users can remove their blogs from the platform.</li>
+    <li><strong>Change Password:</strong> Users can update their password from the dashboard for better security.</li>
+    <li><strong>Logout:</strong> When users log out, the session ends, and they must log in again to access their
+      dashboard.</li>
+    <li><strong>Delete User Account:</strong> Users can delete their accounts, which removes all associated data.</li>
+  </ul>
+
+  <h2>Security Features</h2>
+  <ul>
+    <li><strong>Password Hashing:</strong> User passwords are securely stored using hashing algorithms.</li>
+    <li><strong>Session Expiration:</strong> Sessions expire after a period of inactivity to prevent unauthorized
+      access.</li>
+    <li><strong>CSRF Protection:</strong> Cross-Site Request Forgery protection is enabled for secure form submissions.
+    </li>
+  </ul>
+
+  <h2>Technologies Used</h2>
+  <ul>
+    <li><strong>Django Framework:</strong> Used for building the backend authentication system.</li>
+    <li><strong>HTML & CSS:</strong> For the frontend interface and styling.</li>
+    <li><strong>MySQL Database:</strong> For storing user data and blog information.</li>
+  </ul>
+
+  <p style="text-align: center; margin-top: 20px;" class="pi">
+    This user authentication system ensures that users can securely manage their data and perform actions such as
+    adding, updating, and deleting blogs, while keeping their personal information safe.
+  </p>
+</div>
+
+
+
+
+{% endblock %}

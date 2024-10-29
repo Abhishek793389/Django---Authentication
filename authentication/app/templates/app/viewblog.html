@@ -1,0 +1,47 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block title %} View Blog{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/viewblog.css' %}">
+
+
+<div class="messages">
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+</div>
+
+
+
+<div class="blogs-section">
+  <h2>Your Blogs</h2>
+
+  {% if data %}
+      <ul>
+          {% for blog in data %}
+              <li>
+                  <h3>{{ blog.title }}</h3> 
+                  <p>{{ blog.description }}</p>  
+                  <small>Posted on: {{ blog.created_at }}</small>  
+
+                  <div class="actiom">
+                    
+                  <a href="{% url 'delete_blog' blog.id %}" >Remove</a>
+                  <a href="{% url 'update_blog' blog.id %}" >Update</a></div>
+              </li>
+          {% endfor %}
+      </ul>
+  {% else %}
+      <p>No blogs added yet.</p>
+  {% endif %}
+</div>
+
+
+{% endblock %}
+
+  
+  
+
+

@@ -1,0 +1,20 @@
+/* Apply a fade-in animation when the page loads */
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 0.3s ease-in-out forwards;
+}
+
+/* Define the fade-in keyframes */
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Prevent a flash of content during loading */
+body {
+  visibility: hidden;
+}

@@ -1,0 +1,72 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block title %} Dashboard {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+
+   
+
+    <div class="profile-container">
+
+        <div class="messages">
+            {% for message in messages %}
+                {% if message.tags == 'success' %}
+                    <p>{{ message }}</p>
+                {% else %}
+                    <p class="msg-error">{{ message }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+        <div class="profile-img">
+            {% if profile.profile_pic %}
+                <img src="{{ profile.profile_pic.url }}" alt="Profile Picture">
+            {% else %}
+                <img src="{% static 'image/pc.png' %}" alt="Default Profile Picture">
+            {% endif %}
+        </div>
+
+        <div class="profile-details">
+            <h1>{{ user.first_name }} Profile</h1>
+            <p><strong>Name :</strong> <span class="spacer"></span>{{ profile.user.first_name }} {{ profile.user.last_name }}</p>
+            <p><strong>User Name :</strong> <span class="spacer"></span>{{ profile.user.username }}</p>
+            <p><strong>Email :</strong> <span class="spacer"></span>{{ profile.user.email }}</p>
+            <p><strong>Mobile :</strong> <span class="spacer"></span>{{ profile.mobile_no }}</p>
+            <p><strong>Address :</strong><span class="spacer"></span> {{ profile.address }}</p>
+            <p><strong>Date of Birth :</strong> <span class="spacer"></span>{{ profile.dob }}</p>
+            <p><strong>Session ID :</strong></strong> {{ session_id }}</p>
+            <!-- <a type="button" class="btn" href="{% url 'logout' %}">Logout</a>
+
+            <a type="button" class="btn" href="{% url 'blog' %}">Blog</a> -->
+
+            
+        </div>
+    </div>
+ 
+    <div class="blogs-section">
+        <h2>Your Blogs</h2>
+        {% if data %}
+            <ul>
+                {% for blog in data %}
+                    <li>
+                        <h3>{{ blog.title }}</h3> 
+                        <p>{{ blog.description }}</p>  
+                        <small>Posted on: {{ blog.created_at }}</small>  
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No blogs added yet.</p>
+        {% endif %}
+      </div>
+
+
+    
+
+
+
+{% endblock %}

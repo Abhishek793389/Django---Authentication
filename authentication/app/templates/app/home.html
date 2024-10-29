@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <div class="homepage-container">
+    <h1 class="welcome-text">Welcome to the <span>User Authentication System</span></h1>
+    <p class="intro-text">
+      A secure and user-friendly solution built with Django that offers powerful authentication features like registration, login, profile management, and password encryption.
+    </p>
+
+
+    <div class="image-container">
+      <img src="{% static 'image/lock.jpg' %}" alt="Authentication System" class="project-img">
+    </div>
+
+    <div class="project-info">
+      
+
+      <div class="features-list-container">
+        <h2>Features</h2>
+        <ul class="features-list">
+          <li>Secure User Registration and Login</li>
+          <li>Encrypted Passwords and Session Management</li>
+          <li>Profile Management with Picture Upload</li>
+          <li>Role-Based Access Control (RBAC)</li>
+          <li>Update your details</li>
+          <li>Change your password and logout</li>
+          <li>Sessions Management</li>
+          <li>Delete Sessions and Sessions ID</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+

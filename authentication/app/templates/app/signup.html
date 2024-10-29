@@ -1,0 +1,43 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+
+ 
+    <div class="register-page">
+      <div class="image-container">
+        <img src="{% static 'image/register.jpg' %}" alt="Authentication System" class="project-img">
+      </div>
+      <div class="register-container">
+        <h1>Register Here</h1>
+        <form method="POST" class="register-form" enctype="multipart/form-data">
+          {% csrf_token %}
+
+          <div class="form-grid">
+            {% for form in form %}
+              <div class="form-group">
+                <label>{{ form.label }}</label>
+                {{ form }}
+                <span class="error">{{ form.errors|striptags }}</span>
+              </div>
+            {% endfor %}
+
+            {% for form in form1 %}
+              <div class="form-group">
+                <label>{{ form.label }}</label>
+                {{ form }}
+                <span class="error">{{ form.errors|striptags }}</span>
+              </div>
+            {% endfor %}
+          </div>
+
+          <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+      </div>
+    </div>
+  
+{% endblock %}

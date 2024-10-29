@@ -1,0 +1,161 @@
+/* Reset some browser default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+  background-color: #621b40;
+  padding: 20px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffd700;
+}
+
+/* Main Content Styles */
+.content {
+  flex: 1; 
+  padding: 20px;
+}
+
+
+
+/* Footer Styles */
+footer {
+  background-color: #621b40;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar ul li.profile-img {
+  display: flex;
+  align-items: center;
+  
+  
+
+}
+
+/* Profile Image Styling */
+.navbar ul li.profile-img img {
+  width: 30px;   /* Smaller size for better fit */
+  height: 30px;
+  border-radius: 50%;  /* Circular shape */
+  object-fit: cover;   /* Maintains aspect ratio */
+  border: none; /* Optional light border */
+  cursor: pointer;
+  padding-left: 0;
+  margin: 0 ;
+}
+
+
+
+
+/* Dropdown Menu Styling */
+.navbar ul li ul.dropdown-menu {
+    display:none; /* Initially hide the dropdown */
+    position: absolute;
+    top: 100%; /* Position below the parent <li> */
+    right: 0px;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0.8, 0);
+    padding: 0 0;
+    border-radius: 5px;
+    z-index: 1000; 
+}
+.navbar ul li.dropdown{
+  margin-right: 0;
+
+
+
+
+}
+/* Dropdown Items */
+.navbar ul li ul.dropdown-menu li {
+    padding: 8px 8px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin-left: 0;
+    margin-right: 0;
+    
+
+}
+
+.navbar ul li ul.dropdown-menu li a {
+    text-decoration: none;
+    display: block;
+    color: #621b40;
+    font-size: 15px;
+}
+
+.navbar ul li ul.dropdown-menu li a:hover {
+    background-color: rgba(240, 232, 232, 0.901);
+    border-radius: 2px;
+}
+
+/* Show Dropdown on Hover */
+.navbar ul li.dropdown:hover ul.dropdown-menu {
+    display: block;
+}
+
+/* Optional: Adjust Navbar Links */
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    
+    
+}
+
+
+
+
+.user{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;       /* White border around the div */
+  padding: 2px 0px;                 /* Space inside the border */
+  border-radius: 10px;           /* Slightly rounded corners */     
+  
+ 
+  
+  
+}
+
+.nav ul li i {
+  margin-right: 5px;
+}

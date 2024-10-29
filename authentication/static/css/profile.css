@@ -1,0 +1,163 @@
+/* Reset some browser default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Content Styles */
+.content {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: #f0f0f5;
+  gap: 30px; /* Space between profile and blog sections */
+}
+
+/* Messages Section */
+/* .messages {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.messages p {
+  display: inline-block;
+  background-color: #d4edda;
+  color: green;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 5px 0;
+} */
+
+.messages {
+  position: absolute;
+  top: 20px;
+  width: 100%; /* Full width of the container */
+  text-align: center; /* Center-align text within the div */
+  z-index: 10; /* Ensure it stays on top */
+}
+
+.messages p {
+  display: inline-block; /* Make each message fit its content */
+  color: #28a745;
+  background-color: #d4edda;
+  padding: 13px 170px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  /* gap: 20px; */
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  width: 50%; /* Adjust width to balance layout */
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+/* Profile Image */
+.profile-img img {
+  width: 300px;
+  height: 400px;
+  /* margin-right: 5em; */
+  border-radius: 50%; /* Circle shape */
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(97, 8, 81, 0.6);
+  margin-right: 50px;
+}
+
+/* Profile Details */
+.profile-details {
+  flex: 1;
+  padding: 0 20px;
+  
+}
+
+.profile-details h1 {
+  margin-bottom: 10px;
+  color: #621b40;
+}
+
+.profile-details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.profile-details .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #621b40;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.profile-details .btn:hover {
+  background-color: #4a1330;
+}
+
+.spacer {
+  display: inline-block;
+  width: 15px;
+}
+
+/* Blog Section */
+.blogs-section {
+  width: 40%; /* Adjust to align with the profile section */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.blogs-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.blogs-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.blogs-section li {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blogs-section h3 {
+  font-size: 20px;
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+.blogs-section p {
+  font-size: 16px;
+  color: #555;
+}
+
+.blogs-section small {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #888;
+}

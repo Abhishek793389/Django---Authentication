@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="{% static 'favicon.png' %}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/transition.css' %}">
+  
+  <title>{% block title %} {% endblock %}</title>
+</head>
+<body class="fade-in">
+  <header>
+    <nav class="navbar">
+      <ul>
+
+        <li><i class="fa-solid fa-house" style="color: #fcfcfc; margin-right: 3px;"></i><a href="{% url 'home' %}" > Home</a></li>
+        <li><i class="fa-solid fa-circle-info" style="color: #ffffff; margin-right: 3px;"> </i><a href="{% url 'about' %}">About</a></li>
+        <li><i class="fa-solid fa-user" style="color: #ffffff; margin-right: 5px;"></i><a href="{% url 'userprofile' %}">Dashboard</a></li>
+
+        {% if request.user.is_authenticated %}
+        <li><i class="fa-solid fa-comment" style="color: #ffffff; margin-right: 3px;"></i><a href="{% url 'blog' %}">Add Blog</a></li>
+        <li><i class="fa-solid fa-star" style="color: #ffffff; margin-right: 3px;"></i><a href="{% url 'viewblog' %}">All Blogs</a></li>
+      
+        <div class="user">
+        <li class="dropdown">
+          <a href="#">{{ user.first_name }}</a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'changepassword' %}"><i class="fa-solid fa-lock" margin-right: 3px;></i> Change Password</a></li>
+            <li><a href="{% url 'update_user' user.id %}"><i class="fa-solid fa-pen-to-square"></i> Update Profile</a></li>
+            <li><a href="{% url 'delete' user.id %}" ><i class="fa-solid fa-trash"></i> Delete</a></li>
+            <li><a href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+          </ul>
+        </li>
+
+        <li class="profile-img">
+          {% if profile.profile_pic %}
+                <img src="{{ profile.profile_pic.url }}" alt="Profile Picture">
+            {% else %}
+                <img src="{% static 'image/pc.png' %}" alt="Default Profile Picture">
+          {% endif %}
+          
+        </li>
+        </div>
+        {% else %}
+        <li><i class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 3px;"></i><a href="{% url 'login' %}">Login</a></li>
+        <li><i class="fa-solid fa-user-plus" style="color: #ffffff; margin-right: 3px;"></i><a href="{% url 'signup' %}">Register</a></li>
+        
+        {% endif %}
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    {% block content %}
+    
+    {% endblock %}
+  </main>
+
+  <footer>
+    <p>&copy; 2024 User Authentication by Abhishek Kumar.</p>
+  </footer>
+  <script src="{% static 'js/transition.js' %}"></script>
+</body>
+</html>
