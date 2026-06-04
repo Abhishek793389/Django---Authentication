@@ -22,25 +22,6 @@ A simple Django Authentication System that allows users to register, login, logo
 - Bootstrap (Optional)
 - SQLite
 
-## Project Structure
-
-```
-project/
-│
-├── authentication/
-│   ├── migrations/
-│   ├── templates/
-│   ├── views.py
-│   ├── models.py
-│   ├── urls.py
-│
-├── project/
-│   ├── settings.py
-│   ├── urls.py
-│
-├── db.sqlite3
-├── manage.py
-```
 
 ## Installation
 
@@ -154,6 +135,4 @@ Add screenshots here:
 - Python Django Developer
 - Skills: Python, Django, SQL, HTML, CSS, JavaScript, Power BI
 
-## License
 
-This project is open-source and available under the MIT License.
